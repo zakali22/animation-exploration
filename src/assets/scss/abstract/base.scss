@@ -4,7 +4,7 @@
     --dark-blue: #0a081e;
     --white: #fff;
     --light-grey: rgba(0,0,0,.3);
-    --light-grey-100: #6f6f6f;
+    --light-grey-100: #c9c9c9;
     --light-grey-200: rgba(255,255,255,.43);
     --nav-height-desktop: 150px;
 }
@@ -43,7 +43,7 @@ body {
     overflow-x: hidden;
     font-family: "Averta CY", sans-serif;
     font-weight: 400;
-    // background-color: var(--dark-blue)
+    background-color: var(--white)
 }
 
 h1, .h1 {

@@ -37,7 +37,7 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
             },
-            { test: /\.html$/, loader: 'html-loader' } // For html pages
+            { test: /\.html$/, loader: 'html-loader' }, // For html pages
         ]
     },
 
@@ -46,11 +46,6 @@ module.exports = {
             title: "Webpack Output",
             filename: 'index.html',
             template: 'index.html'
-        }),
-        new HtmlWebpackPlugin({
-            title: "Webpack Output",
-            filename: './src/pages/svg-filters/svg-distortion.html',
-            template: './src/pages/svg-filters/svg-distortion.html'
         }),
         new CleanWebpackPlugin()
     ],
