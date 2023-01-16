@@ -1,14 +1,3 @@
-/** CSS Variables **/
-:root {
-    --black: #000;
-    --dark-blue: #0a081e;
-    --white: #fff;
-    --light-grey: rgba(0,0,0,.3);
-    --light-grey-100: #c9c9c9;
-    --light-grey-200: rgba(255,255,255,.43);
-    --nav-height-desktop: 150px;
-}
-
 /** Font face **/
 @font-face {
     font-family: "Averta CY";
@@ -43,7 +32,9 @@ body {
     overflow-x: hidden;
     font-family: "Averta CY", sans-serif;
     font-weight: 400;
-    background-color: var(--white)
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color .7s ease, color .7s ease;
 }
 
 h1, .h1 {
@@ -71,7 +62,7 @@ p {
 }
 
 a {
-    color: var(--black);
+    color: var(--text-color);
     font-size: 20px;
     text-decoration: none;
 }

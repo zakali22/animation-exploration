@@ -1,5 +1,6 @@
 // Base files
-@import "./abstract/base.scss";
 @import "./abstract/variables.scss";
+@import "./abstract/base.scss";
 
-@import "./components/header.scss"
+@import "./components/header.scss";
+@import "./components/nav.scss"
