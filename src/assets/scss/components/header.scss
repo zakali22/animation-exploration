@@ -62,12 +62,25 @@
             a {
                 display: flex;
                 align-items: center;
+
+                &:hover, &:focus {
+                    span:last-of-type {
+                        color: var(--text-color);
+                        -webkit-text-fill-color: var(--text-color);
+                        transition: color 5s ease, -webkit-text-fill-color 5s ease;
+                    }
+                }
             }
 
             span:last-of-type {
                 font-size: 30px;
                 font-weight: bold;
                 line-height: 1;
+                color: transparent;
+                -webkit-text-stroke-color: var(--text-color);
+                -webkit-text-stroke-width: 0.7px;
+                -webkit-text-fill-color: transparent;
+                transition: color 5s ease, -webkit-text-fill-color 5s ease;
 
                 @media(min-width: 480px){
                     font-size: 40px;

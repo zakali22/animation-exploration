@@ -38,6 +38,7 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
             },
+            { test: /\.svg$/, type: "asset" },
             { test: /\.html$/, loader: 'html-loader' }, // For html pages,
             { test: /\.handlebars$/, loader: "handlebars-loader" }
         ]
