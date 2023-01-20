@@ -1,2 +1,4 @@
 import "../scss/index.scss"
-console.log("Hello world")
+import "./components/theme-toggle.js"
+import "./components/customCursor.js"
+import "./components/headerReveal.js"

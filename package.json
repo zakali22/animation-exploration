@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "hbs2html": "webpack --config webpack.hbs.js",
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.11.4",
+    "handlebars-webpack-plugin": "^2.2.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jquery": "^3.6.3",
+    "mouse-follower": "^1.1.2",
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
@@ -22,8 +29,6 @@
     "css-loader": "^6.7.3",
     "cssnano": "^5.1.14",
     "file-loader": "^6.2.0",
-    "html-loader": "^4.2.0",
-    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
     "postcss-loader": "^7.0.2",
     "sass": "^1.57.1",
