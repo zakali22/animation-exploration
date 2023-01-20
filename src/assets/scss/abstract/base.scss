@@ -35,6 +35,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color .7s ease, color .7s ease;
+    // perspective: 800px;
 }
 
 h1, .h1 {

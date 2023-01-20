@@ -52,6 +52,7 @@
             width: 100%;
             white-space: nowrap;
             padding-bottom: 20px;
+            perspective: 800px;
 
             @media(min-width: 768px){
                 padding-bottom: 4vw;
@@ -62,6 +63,13 @@
             a {
                 display: flex;
                 align-items: center;
+                // transform: rotateX(291deg);
+                // -webkit-transform: translate3d(0, 0%,0) rotate3d(1, 0, 0, 290deg) scale3d(0.5, 0.5, 0.5);
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                transform-origin: 50% 50%;
+                transform: translate3d(0, 100%,0) rotate3d(1, 0, 0, 210deg) scale3d(0.8, 0.8, 0.8);
+                opacity: 0;
 
                 &:hover, &:focus {
                     span:last-of-type {
@@ -120,7 +128,16 @@
         }
 
         &-link {
-            padding-bottom: 15px
+            padding-bottom: 15px;
+            perspective: 800px;
+            
+            a {
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                transform-origin: 50% 50%;
+                transform: translate3d(0, 100%,0) rotate3d(1, 0, 0, 210deg) scale3d(0.8, 0.8, 0.8);
+                opacity: 0;
+            }
         }
     }
 }
