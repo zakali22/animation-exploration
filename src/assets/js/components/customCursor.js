@@ -48,18 +48,20 @@ const customCursor = (function(){
     }
     
     function init(){
-        document.addEventListener('DOMContentLoaded', function(){
-            console.log("mouse follower init")
-            cursor = new MouseFollower({
-                el: null,
-                container: document.body,
-                iconSvgSrc: arrowUp
-            });
+        if (typeof window === "object") {
+            document.addEventListener('DOMContentLoaded', function(){
+                console.log("mouse follower init")
+                cursor = new MouseFollower({
+                    el: null,
+                    container: document.body,
+                    iconSvgSrc: arrowUp
+                });
 
-            initExpandedCursor()
-            initMagneticCursor()
-            
-        })
+                initExpandedCursor()
+                initMagneticCursor()
+                
+            })
+        }
     }
 
     return {

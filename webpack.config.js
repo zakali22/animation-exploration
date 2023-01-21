@@ -14,10 +14,6 @@ module.exports = {
         publicPath: '/'
     },
 
-    node: {
-        __dirname: "mock"
-    },
-
     devServer: {
         static: './dist',
         open: true
@@ -39,11 +35,18 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: ["style-loader", "css-loader", "sass-loader"] // Evaluated from right to left
             },
-            { 
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource',
+            // { 
+            //     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+            //     type: 'asset/resource',
+            // },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                use: {loader: 'url-loader',
+                options: {
+                  limit: '10000',
+                  mimetype: 'image/svg+xml',
+                }}
             },
-            { test: /\.svg$/, type: "asset" },
             { test: /\.html$/, loader: 'html-loader' }, // For html pages,
             { test: /\.handlebars$/, loader: "handlebars-loader" }
         ]
@@ -53,14 +56,10 @@ module.exports = {
         new HtmlWebpackPlugin({ // For each create a new HtmlWebpackPlugin
             title: "Webpack Output",
             filename: 'index.html',
-            template: 'index.html'
+            template: 'index.html',
+            inject: true
         }),
         new HandlebarsPlugin({
-            htmlWebpackPlugin: {
-                enabled: true, // register all partials from html-webpack-plugin, defaults to `false`
-                prefix: "html", // where to look for htmlWebpackPlugin output. default is "html"
-                HtmlWebpackPlugin // optionally: pass in HtmlWebpackPlugin if it cannot be resolved
-            },
             // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
             entry: path.join(process.cwd(), "handlebars", "*.hbs"),
             // output path and filename(s). This should lie within the webpacks output-folder
