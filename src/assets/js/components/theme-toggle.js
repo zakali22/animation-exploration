@@ -79,29 +79,31 @@ const theme = (function(){
 
 
     function init(){
-        document.addEventListener('DOMContentLoaded', function(){
-            themeToggler = document.querySelector('.nav-theme-toggle')
-            initTheme()
-
-            themeToggler.addEventListener('click', function(e){
+        if (typeof window === "object") {
+            document.addEventListener('DOMContentLoaded', function(){
+                themeToggler = document.querySelector('.nav-theme-toggle')
                 initTheme()
-                if(theme === LIGHT_MODE){
-                    themeColors = {
-                        textColor: '#fff',
-                        backgroundColor: '#0e1218'
-                    }
-                } else if(theme === DARK_MODE) {
-                    themeColors = {
-                        textColor: '#000',
-                        backgroundColor: '#f1ede7'
-                    }
-                }
 
-                toggleClass(theme)
-                changeVariables(theme)
+                themeToggler.addEventListener('click', function(e){
+                    initTheme()
+                    if(theme === LIGHT_MODE){
+                        themeColors = {
+                            textColor: '#fff',
+                            backgroundColor: '#0e1218'
+                        }
+                    } else if(theme === DARK_MODE) {
+                        themeColors = {
+                            textColor: '#000',
+                            backgroundColor: '#f1ede7'
+                        }
+                    }
+
+                    toggleClass(theme)
+                    changeVariables(theme)
+                })
+
             })
-
-        })
+        }
     }
 
     return {
