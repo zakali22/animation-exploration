@@ -56,6 +56,11 @@ module.exports = {
             template: 'index.html'
         }),
         new HandlebarsPlugin({
+            htmlWebpackPlugin: {
+                enabled: true, // register all partials from html-webpack-plugin, defaults to `false`
+                prefix: "html", // where to look for htmlWebpackPlugin output. default is "html"
+                HtmlWebpackPlugin // optionally: pass in HtmlWebpackPlugin if it cannot be resolved
+            },
             // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
             entry: path.join(process.cwd(), "handlebars", "*.hbs"),
             // output path and filename(s). This should lie within the webpacks output-folder
