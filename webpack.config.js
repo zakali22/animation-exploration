@@ -10,8 +10,7 @@ module.exports = {
 
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        path: path.resolve(__dirname, 'dist')
     },
 
     devServer: {
@@ -35,18 +34,11 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: ["style-loader", "css-loader", "sass-loader"] // Evaluated from right to left
             },
-            // { 
-            //     test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-            //     type: 'asset/resource',
-            // },
-            {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                use: {loader: 'url-loader',
-                options: {
-                  limit: '10000',
-                  mimetype: 'image/svg+xml',
-                }}
+            { 
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                type: 'asset/resource',
             },
+            { test: /\.svg$/, type: "asset" },
             { test: /\.html$/, loader: 'html-loader' }, // For html pages,
             { test: /\.handlebars$/, loader: "handlebars-loader" }
         ]
@@ -56,8 +48,7 @@ module.exports = {
         new HtmlWebpackPlugin({ // For each create a new HtmlWebpackPlugin
             title: "Webpack Output",
             filename: 'index.html',
-            template: 'index.html',
-            inject: true
+            template: 'index.html'
         }),
         new HandlebarsPlugin({
             // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
