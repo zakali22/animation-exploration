@@ -1,9 +1,13 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HandlebarsPlugin = require("handlebars-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const path = require('path');
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import HandlebarsPlugin from "handlebars-webpack-plugin"
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import path from 'path';
+import { fileURLToPath } from 'url'; // To replicate __dirname -- not able to use it in ES modules
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
     entry: {
         main: path.resolve(__dirname, "./src/assets/js/index.js")
     },

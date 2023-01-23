@@ -1,6 +1,6 @@
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
-import Magnetic from "../vendors/magnetic";
+import Magnetic from "../vendors/magnetic.js";
 
 // Assets
 import arrowUp from "../../img/arrow.svg"
