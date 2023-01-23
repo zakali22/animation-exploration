@@ -1,4 +1,6 @@
-import "../scss/index.scss"
-import "./components/theme-toggle.js"
-import "./components/customCursor.js"
-import "./components/headerReveal.js"
+"use strict";
+
+require("../scss/index.scss");
+require("./components/theme-toggle.js");
+require("./components/customCursor.js");
+require("./components/headerReveal.js");
