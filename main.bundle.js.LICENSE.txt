@@ -1,0 +1,50 @@
+/*!
+ * Cuberto Magnetic
+ *
+ * @version 1.5.0
+ * @author Cuberto (cuberto.com)
+ * @licence Copyright (c) 2020, Cuberto. All rights reserved.
+ */
+
+/*!
+ * Cuberto Mouse Follower
+ * https://cuberto.com/
+ *
+ * @version 1.1.2
+ * @author Cuberto, Artem Dordzhiev (Draft)
+ */
+
+/*!
+ * GSAP 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * Sizzle CSS Selector Engine v2.3.9
+ * https://sizzlejs.com/
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
+ * https://js.foundation/
+ *
+ * Date: 2022-12-19
+ */
+
+/*!
+ * jQuery JavaScript Library v3.6.3
+ * https://jquery.com/
+ *
+ * Includes Sizzle.js
+ * https://sizzlejs.com/
+ *
+ * Copyright OpenJS Foundation and other contributors
+ * Released under the MIT license
+ * https://jquery.org/license
+ *
+ * Date: 2022-12-20T21:28Z
+ */
