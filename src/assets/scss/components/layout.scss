@@ -1,0 +1,35 @@
+section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+
+    @media(min-width: 1200px){
+        width: 1100px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media(min-width: 1400px){
+        width: 1200px;
+    }
+
+    @media(min-width: 1600px){
+        width: 1340px;
+    }
+}
+
+.title {
+    &.title--center {
+        & > h1,
+        & > h2 {
+            text-align: center;
+        }
+    }
+}

@@ -25,7 +25,7 @@ export default {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|.mjs)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -53,6 +53,11 @@ export default {
             title: "Webpack Output",
             filename: 'index.html',
             template: 'index.html'
+        }),
+        new HtmlWebpackPlugin({ // For each create a new HtmlWebpackPlugin
+            title: "Webpack Output",
+            filename: 'pinned-animation.html',
+            template: 'pinned-animation.html'
         }),
         new HandlebarsPlugin({
             // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),

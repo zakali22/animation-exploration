@@ -38,6 +38,10 @@ body {
     // perspective: 800px;
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    margin: 0;
+}
+
 h1, .h1 {
     font-size: 90px;
     line-height: 1;
@@ -81,18 +85,17 @@ img {
     object-fit: cover;
 }
 
-/** Layouts **/
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 90vw;
+.title {
+    h1, h2 {
+        font-size: 40px;
 
-    &.container-center {
-        // max-width: 75vw;
-
-        @media(min-width: 992px){
-            max-width: 75vw;
+        @media(min-width: 768px){
+            font-size: min(90px, 5vw);
         }
     }
+}
+
+.slideIn {
+    opacity: 0;
+    visibility: hidden;
 }
