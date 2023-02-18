@@ -3,6 +3,8 @@
 @import "./abstract/base.scss";
 
 // Components
+@import "./components/layout.scss";
 @import "./components/header.scss";
 @import "./components/nav.scss";
-@import "./components/custom-cursor.scss"
+@import "./components/custom-cursor.scss";
+@import "./components/panels.scss";
