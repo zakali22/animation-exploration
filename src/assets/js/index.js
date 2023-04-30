@@ -1,3 +1,5 @@
+import "./components/carousel.js"
+import "./components/customMap.js"
 import "../scss/index.scss"
 import "./components/slideIn.js"
 import "./components/theme-toggle.js"

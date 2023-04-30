@@ -1,0 +1,87 @@
+{{> partials/header}}
+
+    <section class="container">
+        <h2 class="slideIn">Custom Google Maps with Carousel</h2>
+    </section>
+
+    <section class="map-carousel container">
+        <div class="map-carousel-wrapper">
+            <div class="map-area">
+                <div id="map"></div>
+            </div>
+            <div class="carousel-wrapper">
+                <!-- Slick -->
+                <div class="carousel-wrapper__content" data-location="dubai">
+                    <div class="carousel-description">
+                        <h3 class="h4">United Arab Emirates</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>
+                            <span>info@klaycapital.com</span>
+                            <span>+971 7171 2838 49903</span>
+                        </p>
+                    </div>
+                    <div class="carousel-services">
+                        <p>Services</p>
+                        <ul class="carousel-services__list colourful-list">
+                            <li class="pink">Wealth Management</li>
+                            <li class="green">Asset Management</li>
+                            <li class="cyan">Multi-Family Office</li>
+                            <li class="orange">Corporate Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper__content" data-location="paris">
+                    <div class="carousel-description">
+                        <h3 class="h4">Paris, France</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>
+                            <span>info@klaycapital.com</span>
+                            <span>+971 7171 2838 49903</span>
+                        </p>
+                    </div>
+                    <div class="carousel-services">
+                        <p>Services</p>
+                        <ul class="carousel-services__list colourful-list">
+                            <li class="pink">Wealth Management</li>
+                            <li class="green">Asset Management</li>
+                            <li class="cyan">Multi-Family Office</li>
+                            <li class="orange">Corporate Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="carousel-wrapper__content" data-location="london">
+                    <div class="carousel-description">
+                        <h3 class="h4">London, UK</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>
+                            <span>info@klaycapital.com</span>
+                            <span>+971 7171 2838 49903</span>
+                        </p>
+                    </div>
+                    <div class="carousel-services">
+                        <p>Services</p>
+                        <ul class="carousel-services__list colourful-list">
+                            <li class="pink">Wealth Management</li>
+                            <li class="green">Asset Management</li>
+                            <li class="cyan">Multi-Family Office</li>
+                            <li class="orange">Corporate Advisory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-dots"></div>
+    </section>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBI4s58a2QK7_5iPHN5zHmK-JvXZsd2EZs&callback=initMap&v=weekly"  defer
+    ></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+{{> partials/footer}}

@@ -59,6 +59,11 @@ export default {
             filename: 'pinned-animation.html',
             template: 'pinned-animation.html'
         }),
+        new HtmlWebpackPlugin({ // For each create a new HtmlWebpackPlugin
+            title: "Webpack Output",
+            filename: 'custom-map.html',
+            template: 'custom-map.html'
+        }),
         new HandlebarsPlugin({
             // path to hbs entry file(s). Also supports nested directories if write path.join(process.cwd(), "app", "src", "**", "*.hbs"),
             entry: path.join(process.cwd(), "handlebars", "*.hbs"),

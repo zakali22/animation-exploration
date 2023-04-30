@@ -1,0 +1,101 @@
+
+.map-carousel {
+    display: flex;
+    flex-direction: column;
+
+    .map-carousel-wrapper {
+        display: flex;
+    }
+
+    .map-area, .carousel-wrapper {
+        flex: 0 0 auto;
+        width: 50%
+    }
+
+    .carousel-wrapper {
+        background: var(--light-grey-200);
+        padding: 40px;
+    }
+
+    .carousel-description {
+        p {
+            margin: 30px 0;
+
+            span {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .carousel-services {
+        p {
+            font-weight: bold;
+        }
+    }
+
+    .map-dots, .slick-dots {
+        display: flex;
+    }
+
+    .map-dots {
+        justify-content: center;
+    }
+
+    .slick-slide {
+        &.fade-in {
+            animation: fadeIn 1s ease-in;
+            animation-delay: 0.6;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    .slick-dots {
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 20px;
+            
+            button {
+                cursor: pointer;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: transparent;
+                border: none;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background: transparent;
+                    border: 1px solid #000;
+                }
+            }
+
+            &.slick-active {
+                button::after {
+                    background: #000
+                }
+            }
+        }
+    }
+}
+
+
+#map {
+    height: 100%;
+}

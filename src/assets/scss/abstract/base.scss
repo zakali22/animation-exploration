@@ -62,9 +62,13 @@ h4, .h4 {
     line-height: 1.5;
 }
 
-p, .p {
+p, .p, ul li, ol li {
     font-size: 20px;
     line-height: 1.2;
+}
+
+ul li, ol li {
+    margin-bottom: 15px
 }
 
 a {
@@ -98,4 +102,18 @@ img {
 .slideIn {
     opacity: 0;
     visibility: hidden;
+}
+
+.colourful-list {
+    padding-left: 24px;
+
+    li::marker {
+        font-size: 25px;
+    }
+
+    @each $colourName, $value in $colourList {
+        li.#{$colourName}::marker {
+            color: #{$value};
+        }
+    }
 }
